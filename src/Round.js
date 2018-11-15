@@ -1,4 +1,5 @@
 import Deck from './Deck';
+import Player from './Player';
 
 class Round {
   constructor() {
@@ -7,9 +8,12 @@ class Round {
 
     this.deck.shuffle();
 
-    this.players = ['Domi', 'Basi', 'Klaus', 'Thomas'];
-
-    this.playerCards = [[], [], [], []];
+    this.players = [
+        new Player('Domi'),
+        new Player('Basi'),
+        new Player('Klaus'),
+        new Player('Thomas')
+    ];
 
     this.deal();
 
@@ -18,13 +22,13 @@ class Round {
   deal() {
     for (var i = 0; i < 8; i++) {
         for (var j = 0; j < 4; j++) {
-            this.playerCards[i % 4].push(this.deck.deal());
+            this.players[i % 4].dealCard(this.deck.deal());
         }
     }
   }
 
-  debugPlayer(playerNum) {
-    return this.playerCards[playerNum].join(', ');
+  getPlayerByPosition (position) {
+    return this.players[position].name;
   }
 
 }

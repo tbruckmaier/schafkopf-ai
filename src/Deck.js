@@ -1,3 +1,5 @@
+import Card from './Card';
+
 class Deck {
   constructor() {
     this.deck = [];
@@ -7,7 +9,7 @@ class Deck {
 
     for (let suit in suits) {
       for (let value in values) {
-        this.deck.push(`${values[value]} of ${suits[suit]}`);
+        this.deck.push(new Card(suits[suit], values[value]));
       }
     }
   }

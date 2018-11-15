@@ -36,32 +36,37 @@
   background-color: green;
 }
 
-.player-1, .player-3 {
+.player-0, .player-2 {
   width: 20%;
-  height: 40%;
+  /*height: 40%;*/
 }
 
-.player-2, .player-4 {
-  width: 40%;
+.player-1, .player-3 {
+  /*width: 40%;*/
   height: 20%;
 }
 
-.player-1 {
+.player-1 li, .player-3 li {
+  display: inline;
+  margin-left: 10px;
+}
+
+.player-0 {
   left: 20px;
   top: 30%;
 }
 
-.player-2 {
+.player-1 {
   top: 20px;
   left: 30%;
 }
 
-.player-3 {
+.player-2 {
   right: 20px;
-  top: 15%;
+  top: 30%;
 }
 
-.player-4 {
+.player-3 {
   bottom: 20px;
   left: 30%;
 }
