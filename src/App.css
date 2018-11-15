@@ -30,3 +30,38 @@
     transform: rotate(360deg);
   }
 }
+
+.player {
+  position: absolute;
+  background-color: green;
+}
+
+.player-1, .player-3 {
+  width: 20%;
+  height: 40%;
+}
+
+.player-2, .player-4 {
+  width: 40%;
+  height: 20%;
+}
+
+.player-1 {
+  left: 20px;
+  top: 30%;
+}
+
+.player-2 {
+  top: 20px;
+  left: 30%;
+}
+
+.player-3 {
+  right: 20px;
+  top: 15%;
+}
+
+.player-4 {
+  bottom: 20px;
+  left: 30%;
+}

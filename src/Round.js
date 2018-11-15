@@ -16,14 +16,15 @@ class Round {
   }
 
   deal() {
-    var playerNum = 0;
     for (var i = 0; i < 8; i++) {
         for (var j = 0; j < 4; j++) {
             this.playerCards[i % 4].push(this.deck.deal());
-
         }
     }
+  }
 
+  debugPlayer(playerNum) {
+    return this.playerCards[playerNum].join(', ');
   }
 
 }
