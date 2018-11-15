@@ -2,8 +2,8 @@ class Deck {
   constructor() {
     this.deck = [];
 
-    const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
-    const values = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
+    const suits = ['Eichel', 'Gras', 'Herz', 'Schellen'];
+    const values = ['Ass', 'König', 'Ober', 'Unter', 10, 9, 8, 7];
 
     for (let suit in suits) {
       for (let value in values) {
