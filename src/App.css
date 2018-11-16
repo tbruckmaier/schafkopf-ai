@@ -33,7 +33,14 @@
 
 .player {
   position: absolute;
-  background-color: green;
+}
+
+.player .hand {
+    background-color: green;
+}
+
+.player .middle {
+  background-color: brown;
 }
 
 .player-0, .player-2 {

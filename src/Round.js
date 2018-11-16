@@ -17,6 +17,9 @@ class Round {
 
     this.deal();
 
+    this.activePlayer = -1
+    this.nextPlayer();
+
   }
 
   deal() {
@@ -29,6 +32,16 @@ class Round {
 
   getPlayerByPosition (position) {
     return this.players[position].name;
+  }
+
+  nextPlayer () {
+    if (this.activePlayer >= 0) {
+      this.players[this.activePlayer].dran = false;
+    }
+
+    this.activePlayer += 1;
+    this.activePlayer %= 4;
+    this.players[this.activePlayer].dran = true;
   }
 
 }

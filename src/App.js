@@ -24,14 +24,25 @@ class App extends Component {
           {this.state.round.players.map((player, i) => {
             return (
               <div className={"player player-" + i } key={i}>
-                <h2 className="name">{player.name}</h2>
-                <ul>
+                <h2 className="name">{player.name} {player.beautifulDran()}</h2>
+                <ul className="hand">
                 {player.cards.map((card, j) => {
-                  return (<li key={i.toString()+j}>{card.name()}</li>)
+
+                  let cardDiv;
+                  if (player.dran) {
+                    cardDiv = (<button onClick={(e) => { player.playCard(card); this.state.round.nextPlayer(); this.forceUpdate()} }>{card.name()}</button>)
+                  } else {
+                    cardDiv = card.name()
+                  }
+
+                  return (<li key={i.toString()+j}>{cardDiv}</li>)
                 })}
                 </ul>
-              </div>)
+                <div className={"middle middle-" + i}>{player.getPlayedCardName()}</div>
+              </div>
+            )
           })}
+
         </section>
       </div>
     );

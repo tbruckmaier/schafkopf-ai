@@ -7,9 +7,12 @@ class Deck {
     const suits = ['Eichel', 'Gras', 'Herz', 'Schellen'];
     const values = ['Ass', 'König', 'Ober', 'Unter', 10, 9, 8, 7];
 
+    let i = 0;
+
     for (let suit in suits) {
       for (let value in values) {
-        this.deck.push(new Card(suits[suit], values[value]));
+        this.deck.push(new Card(i, suits[suit], values[value]));
+        i += 1;
       }
     }
   }

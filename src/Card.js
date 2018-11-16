@@ -1,5 +1,6 @@
 class Card {
-    constructor(farbe, schlag) {
+    constructor(id, farbe, schlag) {
+        this.id = id;
         this.farbe = farbe;
         this.schlag = schlag;
     }
